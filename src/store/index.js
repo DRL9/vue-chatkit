@@ -11,10 +11,23 @@ const vueLocal = new VuexPersist({
 });
 
 export default new Vuex.Store({
-  state: {},
+  state: {
+    loading: false,
+    sending: false,
+    error: null,
+    user: [],
+    reconnect: false,
+    activeRoom: null,
+    rooms: [],
+    users: [],
+    messages: [],
+    userTyping: null
+  },
   mutations,
   actions,
-  getters: {},
+  getters: {
+    hasError: state => Boolean(state.error)
+  },
   plugins: [vueLocal.plugin],
   strict: process.env.NODE_ENV !== "production"
 });
