@@ -23,7 +23,7 @@
         {
             "type": "shell",
             "label": "open_chrome",
-            "command": "google-chrome-stable --remote-debugging-port=9222 --user-data-dir=/tmp/chrome-debug --app=http://localhost:8080"
+            "command": "google-chrome-stable --remote-debugging-port=9222 --user-data-dir=/tmp/chrome-debug http://localhost:8080"
         }
     ]
 }
