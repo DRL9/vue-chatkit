@@ -28,6 +28,9 @@ export default {
   name: "login",
   components: {
     LoginForm
+  },
+  mounted() {
+    this.$store.commit("reset");
   }
 };
 </script>
